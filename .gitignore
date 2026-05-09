@@ -34,3 +34,11 @@ Thumbs.db
 # Logs
 *.log
 npm-debug.log*
+
+# Brief / submission artifacts
+*.pdf
+*.zip
+
+# Build cache
+.turbo/
+coverage/

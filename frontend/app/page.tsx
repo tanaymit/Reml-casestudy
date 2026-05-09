@@ -91,10 +91,11 @@ function WaterfallTable({ steps }: { steps: RentEstimate["waterfall"] }) {
           ))}
           <tr className="bg-gray-900 text-white">
             <td colSpan={2} className="py-4 px-4 font-bold text-sm">Point Estimate</td>
-            <td className="py-4 px-4 text-right font-mono font-bold text-xl text-emerald-400">
-              ${fmt(steps[steps.length - 1]?.after ?? 0)}
+            <td className="py-4 px-4 text-right">
+              <span className="font-mono font-bold text-xl text-emerald-400">${fmt(steps[steps.length - 1]?.after ?? 0)}</span>
+              <span className="text-gray-500 text-xs ml-1">/sf/yr</span>
             </td>
-            <td className="py-4 px-4 text-right text-xs text-gray-400">$/sf/yr</td>
+            <td className="py-4 px-4 text-right text-gray-600 text-xs">—</td>
             <td className="py-4 px-4 text-xs text-gray-400 italic">Waterfall final = point estimate (reconstruction verified)</td>
           </tr>
         </tbody>
